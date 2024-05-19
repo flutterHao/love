@@ -1,11 +1,9 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <title> 爱心代码 </title>
     <meta charset="utf-8">
-    <meta name="Author" content="lihonghao">
-    <meta name="Keywords" content="爱心代码">
-    <meta name="Description" content="爱心代码">
     <link rel="shortcut icon" href="../picture/爱心.png" type="image/x-icon">
     <style>
         html,
@@ -13,7 +11,10 @@
             height: 100%;
             padding: 0;
             margin: 0;
-            background: #FFF;
+        }
+
+        body {
+            background-image: url(../picture/VCG211283895629.jpg);
         }
 
         canvas {
@@ -23,8 +24,8 @@
         }
 
         .title {
-            /* width: 20%; */
-            /* height: 30%; */
+            width: 20%;
+            height: 30%;
             /* 文字居中 */
             text-align: center;
             /* 字体大小 */
@@ -32,13 +33,13 @@
             /* 背景颜色 */
             background-color: transparent;
             /* 文字颜色 */
-            color: rgba(247, 110, 206, 0.829);
+            color: rgba(250, 56, 175, 0.829);
             /* 左右居中 */
             margin: auto;
             /* 定位 */
             position: relative;
             /* 上边距 */
-            top: 47%;
+            top: 40%;
             /* 字体 */
             font-family: "幼圆";
         }
@@ -51,14 +52,14 @@
 
     <canvas id="pinkboard"></canvas>
 
-    <div class="title">周晶，520快乐</div>
+    <div class="title">恋爱100天纪念日</div>
     <script>
 
         var settings = {
             particles: {
                 length: 500,
                 duration: 2,
-                velocity: 150,
+                velocity: 100,
                 effect: -0.75,
                 size: 30,
             },

@@ -1,11 +1,9 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <title> 爱心代码 </title>
-    <meta charset="utf-8">
-    <meta name="Author" content="lihonghao">
-    <meta name="Keywords" content="爱心代码">
-    <meta name="Description" content="爱心代码">
+    <meta charset="UTF-8">
     <link rel="shortcut icon" href="../picture/爱心.png" type="image/x-icon">
     <style>
         html,
@@ -13,7 +11,7 @@
             height: 100%;
             padding: 0;
             margin: 0;
-            background: #FFF;
+            background: #000;
         }
 
         canvas {
@@ -21,44 +19,19 @@
             width: 100%;
             height: 100%;
         }
-
-        .title {
-            /* width: 20%; */
-            /* height: 30%; */
-            /* 文字居中 */
-            text-align: center;
-            /* 字体大小 */
-            font-size: 30px;
-            /* 背景颜色 */
-            background-color: transparent;
-            /* 文字颜色 */
-            color: rgba(247, 110, 206, 0.829);
-            /* 左右居中 */
-            margin: auto;
-            /* 定位 */
-            position: relative;
-            /* 上边距 */
-            top: 47%;
-            /* 字体 */
-            font-family: "幼圆";
-        }
     </style>
 
 </head>
 
 <body>
-
-
     <canvas id="pinkboard"></canvas>
-
-    <div class="title">周晶，520快乐</div>
     <script>
 
         var settings = {
             particles: {
                 length: 500,
                 duration: 2,
-                velocity: 150,
+                velocity: 100,
                 effect: -0.75,
                 size: 30,
             },
@@ -136,7 +109,7 @@
                 duration = settings.particles.duration;
 
             function ParticlePool(length) {
-                // create and populate particle pool
+
                 particles = new Array(length);
                 for (var i = 0; i < particles.length; i++)
                     particles[i] = new Particle();
@@ -144,7 +117,6 @@
             ParticlePool.prototype.add = function (x, y, dx, dy) {
                 particles[firstFree].initialize(x, y, dx, dy);
 
-                // handle circular queue
                 firstFree++;
                 if (firstFree == particles.length) firstFree = 0;
                 if (firstActive == firstFree) firstActive++;
